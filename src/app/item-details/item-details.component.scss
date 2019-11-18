@@ -1,0 +1,29 @@
+// Not possible
+// $large-sceen: (min-width: 901px);
+// $small-screen: (min-width: 651px) and (max-width: 900px);
+// $small-screen: (max-width: 650px);
+@media (min-width: 901px) {
+.itemdetails{
+display:grid;
+grid-template-columns: 2fr 1fr;
+grid-template-rows: auto;
+grid-template-areas: "image details";
+}
+}
+.image{
+  grid-area: image;
+  text-align: center;
+  position: relative;
+  margin: 20px auto 0 auto;
+  img{
+
+    width: 50%;
+  }
+}
+.details{
+  grid-area: details;
+  text-align: center;
+  position: relative;
+  margin: 20px auto 0 auto;
+}
+

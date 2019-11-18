@@ -1,0 +1,36 @@
+<div class="store">
+    <div class="sectionone">
+      <img src="assets/horizontal.png">
+      <div class="siteheader">
+        <h1>
+          Ragtag Art
+        </h1>
+        <h3>The Freshest Rag Tag Art!</h3>
+      </div>
+    </div>
+    <div class="sectiontwo">
+      <div class="mat-elevation-z">
+        <div class="storeitems">
+
+          <mat-card class="example-card items" *ngFor="let card of obs | async">
+            <mat-card-header>
+              <mat-card-title>{{card.name}} </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{ card.URL }}" alt="Photo of a piece of clothing">
+            <mat-card-content>
+              <p>
+                {{ card.description }}
+              </p>
+              <h4> £{{ card.price }}</h4>
+
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary">View</button>
+              <button mat-raised-button color="primary">Add to Basket</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <mat-paginator [pageSize]=6 [pageSizeOptions]="[6, 12]"></mat-paginator>
+      </div>
+    </div>
+  </div>

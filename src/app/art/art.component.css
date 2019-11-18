@@ -1,0 +1,125 @@
+img {
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .store {
+    display: grid;
+    grid-template-rows: 0.3fr 2fr;
+    grid-template-areas: "one" "two";
+  }
+}
+@media (min-width: 650px) and (max-width: 899px) {
+  .store {
+    display: grid;
+    grid-template-rows: 0.2fr 2fr;
+    grid-template-areas: "one" "two";
+  }
+}
+@media (max-width: 650px) {
+  .store {
+    display: grid;
+    grid-template-rows: 0.2fr 5.5fr;
+    grid-template-areas: "one" "two";
+  }
+}
+.sectionone {
+  grid-area: one;
+}
+.sectionone h3 {
+  position: relative;
+  margin: 15px auto 15px auto;
+  text-align: center;
+}
+.sectionone h1 {
+  color: black;
+  font-size: 32px;
+}
+@media (max-width: 650px) {
+  .sectionone h1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -20%;
+    top: 40px;
+  }
+}
+@media (min-width: 651px) and (max-width: 899px) {
+  .sectionone h1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -12%;
+    top: 100px;
+  }
+}
+@media (min-width: 900px) {
+  .sectionone h1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -5%;
+    top: 150px;
+  }
+}
+.sectiontwo {
+  grid-area: two;
+  width: 100%;
+  margin: 10px auto 10px auto;
+}
+.sectiontwo .storeitems {
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+.sectiontwo .storeitems mat-card-header {
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .sectiontwo .storeitems {
+    grid-area: items;
+    display: grid;
+    grid-template-rows: repeat(2, 2fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: auto;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .sectiontwo .storeitems {
+    grid-area: items;
+    display: grid;
+    grid-template-rows: repeat(2, 2fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: auto;
+  }
+}
+@media screen and (min-width: 651px) and (max-width: 899px) {
+  .sectiontwo .storeitems {
+    grid-area: items;
+    display: grid;
+    grid-template-rows: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
+    width: auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  .sectiontwo .storeitems {
+    grid-area: items;
+    display: grid;
+    grid-template-rows: repeat(2, 2fr);
+    grid-template-columns: repeat(1, 1fr);
+    width: auto;
+  }
+}
+.sectiontwo .filters {
+  grid-area: filters;
+  padding: 10px 15px 15px;
+}
+.sectiontwo .filters .mat-form-field {
+  font-size: 14px;
+  width: 90%;
+}
+.sectiontwo .filters li {
+  list-style: none;
+}
+.sectiontwo .filters .categoryfilter {
+  padding: 10px;
+}

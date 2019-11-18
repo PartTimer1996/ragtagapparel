@@ -1,0 +1,11 @@
+.swiper {
+  width: 80rem;
+  height: 100%;
+}
+.swiper-slide {
+  color: #aaa;
+}
+.swiper-slide-active {
+  color: #fff;
+  background-color: #aaa;
+}

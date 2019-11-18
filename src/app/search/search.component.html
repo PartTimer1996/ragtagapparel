@@ -1,0 +1,48 @@
+<div class="search">
+    <div class="sectionone">
+        <img src="assets/horizontal.png">
+        <div class="siteheader">
+        <h1>
+        Search all ragtag
+        </h1>
+      </div>
+      </div>
+<div class="sectiontwo">
+<h2>Search below for items you are looking for!</h2>
+<h4>Search</h4>
+<div class="item-search">
+    <mat-form-field>
+        <mat-label>Search Term</mat-label>
+        <input  matInput  placeholder="Search term"  #searchbox  (input)="searchForItems(searchbox.value)">
+     </mat-form-field>
+<div class="loading" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</div>
+</div>
+
+<h3 *ngIf="searched === true && results$.length === 0">
+  Sorry no results found for {{ searchbox.value }}
+</h3>
+<div class="item-search-results">
+  <div class="item">
+    <div  *ngFor="let item of results$">
+      <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>{{item.data.name}}</mat-card-title>
+            <mat-card-subtitle>{{item.data.category}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="{{item.data.URL}}" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              {{item.data.description}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button [routerLink]="['/Item/', item.id]" mat-button>View</button>
+            <button mat-button>Add to Basket</button>
+          </mat-card-actions>
+        </mat-card>
+    </div>
+  </div>
+</div>
+  </div>

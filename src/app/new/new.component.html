@@ -1,0 +1,61 @@
+<div class="store">
+    <div class="sectionone">
+      <img src="assets/horizontal.png">
+      <div class="siteheader">
+        <h1>
+          {{month}} Fresh
+        </h1>
+        <h3>The Freshest Rag Tag apparel from {{month}}!</h3>
+      </div>
+    </div>
+    <div class="sectiontwo">
+      <div class="mat-elevation-z">
+        <div class="storeitems">
+
+          <mat-card class="example-card items" *ngFor="let card of obs | async">
+            <mat-card-header>
+              <mat-card-title>{{card.name}} </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{ card.URL }}" alt="Photo of a piece of clothing">
+            <mat-card-content>
+              <p>
+                {{ card.description }}
+              </p>
+              <h4> £{{ card.price }}</h4>
+
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary">View</button>
+              <button mat-raised-button color="primary">Add to Basket</button>
+            </mat-card-actions>
+          </mat-card>
+          <!-- Functional table  -->
+          <!-- <table mat-table [dataSource]="dataSource" matSort>
+            Progress Column
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+              <td mat-cell *matCellDef="let row"> {{row.name}}% </td>
+            </ng-container>
+            Name Column
+            <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> description </th>
+              <td mat-cell *matCellDef="let row"> {{row.description}} </td>
+            </ng-container>
+            Color Column
+            <ng-container matColumnDef="price">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> price </th>
+              <td mat-cell *matCellDef="let row" [style.color]="row.price"> {{row.price}} </td>
+            </ng-container>
+            <ng-container matColumnDef="URL">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> URL </th>
+                <td mat-cell *matCellDef="let row" [style.color]="row.URL"> {{row.URL}} </td>
+              </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+            </tr>
+          </table> -->
+        </div>
+        <mat-paginator [pageSize]=6 [pageSizeOptions]="[6, 12]"></mat-paginator>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,53 @@
+mat-toolbar{
+  height: auto;
+  }
+
+span{
+  margin: auto;
+}
+
+  .footer{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-areas: "col1 col2 social";
+    margin: auto;
+    position: relative;
+    list-style: none;
+    }
+
+  .col1{
+    grid-area: col1;
+    margin: 5px;
+    ul{
+      li{
+        list-style: none;
+        font-size: 12px;
+      }
+  }
+}
+  .col2{
+    grid-area: col2;
+    margin: 5px;
+    .tiny{
+    font-size: 12px;
+    }
+    ul{
+      li{
+        list-style: none;
+        font-size: 12px;
+
+      }
+  }
+}
+  .social{
+    grid-area: social;
+    margin: 5px;
+    ul{
+      li{
+        list-style: none;
+        font-size: 12px;
+
+      }
+    }
+  }
+

@@ -1,0 +1,159 @@
+<div class="nav">
+  <nav class="bigscreen">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row class="nav-large" color="primary">
+        <div class="sitetitle">
+          <span>
+            <a style="color:rgba(0, 0, 0, 0.87);" [routerLink]="['']">
+             <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/101/2417161101_d4d07ed9-aeeb-4158-a720-607e1b37cf4f.png?cb=1574079220" alt=""></a>
+          </span>
+        </div>
+        <div class="navigation">
+          <ul>
+            <li><a [routerLink]="['/New']">
+                <mat-icon class="icon">new_releases</mat-icon>
+                <span class="label">New</span>
+              </a></li>
+              <li>
+              <mat-icon mat-button [matMenuTriggerFor]="menu" class="icon">shop_two</mat-icon>
+              <button mat-button [matMenuTriggerFor]="menu">
+                Store
+              </button>
+              <mat-menu #menu="matMenu">
+                  <a [routerLink]="['/Store']"><button mat-menu-item>All</button></a>
+                  <a [routerLink]="['/Clothing']"><button mat-menu-item>Apparel</button></a>
+                  <a [routerLink]="['/Art']"><button mat-menu-item>Art</button></a>
+                  <a [routerLink]="['/Other']"><button mat-menu-item>Other</button></a>
+              </mat-menu>
+            </li>
+            <li><a [routerLink]="['/Search']">
+                <mat-icon class="icon">search</mat-icon>
+                <span class="label">Search</span>
+              </a></li>
+              <li>
+                  <li><a href='https://www.instagram.com/f.e.w.k/'>
+                    <mat-icon class="icon">phone_iphone</mat-icon>
+                    <span class="label">Instagram</span>
+                  </a></li>
+                  <li>
+            <li *ngIf="(User | async)"><a routerLink="Dashboard">
+                <mat-icon class="icon">dashboard</mat-icon>
+                <span class="label">User Dashboard</span>
+              </a></li>
+          </ul>
+        </div>
+        <div class="usermanagement">
+            <ul>
+                <li *ngIf="!(User | async)"
+                ><a [routerLink]="['/Login']">
+                  <mat-icon class="icon">input</mat-icon>
+                  <span class="label">Login/Register</span>
+                </a></li>
+                <li *ngIf="(User | async)">
+                    <a routerLink="/Basket">
+                      <mat-icon class="icon">shopping_basket</mat-icon>
+                    <span class="label">Basket</span>
+                  </a></li>
+                  <li (click) = "logout()" *ngIf="(User | async)">
+                    <a>
+                        <mat-icon class="icon">input</mat-icon>
+                      <span class="label">Logout</span>
+                    </a>
+                    </li>
+              </ul>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </nav>
+  <nav class="smallscreen">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row class="nav-small">
+        <div class="sidenavbutton">
+          <span>
+            <button mat-button mat-icon-button mat-button (click)="sidenav.toggle()">
+              <mat-icon>menu</mat-icon>
+            </button>
+          </span>
+        </div>
+        <div class="title">
+          <span>
+            <a [routerLink]="['']" routerLinkActive="router-link-active">
+                <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/101/2417161101_d4d07ed9-aeeb-4158-a720-607e1b37cf4f.png?cb=1574079220" alt="">
+            </a>
+          </span>
+        </div>
+        <div class="pagetitle">
+          <span>{{ title }}</span>
+          <mat-sidenav mode="side" #sidenav [(opened)]="opened" mode="over">
+            <mat-nav-list (click)="sidenav.toggle()">
+              <mat-list-item>
+                <mat-icon>close</mat-icon>
+                <span>Close</span>
+              </mat-list-item>
+              <mat-list-item>
+                <a [routerLink]="['']" routerLinkActive="router-link-active">
+                  <mat-icon>home_work</mat-icon>
+                  <span> Ragtag Home</span>
+                </a>
+              </mat-list-item>
+              <mat-list-item>
+                  <mat-icon mat-button [matMenuTriggerFor]="menu" class="icon">shop_two</mat-icon>
+                  <button mat-button [matMenuTriggerFor]="menu">
+                    Store
+                  </button>
+                  <mat-menu #menu="matMenu">
+                      <a [routerLink]="['/Store']"><button mat-menu-item>All</button></a>
+                      <a [routerLink]="['/Clothing']"><button mat-menu-item>Apparel</button></a>
+                      <a [routerLink]="['/Art']"><button mat-menu-item>Art</button></a>
+                      <a [routerLink]="['/Other']"><button mat-menu-item>Other</button></a>
+                  </mat-menu>
+                </mat-list-item>
+                <mat-list-item>
+                    <a [routerLink]="['/New']" routerLinkActive="router-link-active">
+                        <mat-icon class="icon">new_releases</mat-icon>
+                        <span >New</span>
+                            </a>
+                  </mat-list-item>
+                  <mat-list-item>
+                      <a href='https://www.instagram.com/f.e.w.k/' >
+                          <mat-icon class="icon">phone_iphone</mat-icon>
+                          <span >Instagram</span>
+                              </a>
+                    </mat-list-item>
+              <mat-list-item>
+                <a [routerLink]="['/Search']">
+                  <mat-icon>list</mat-icon>
+                  <span>Search</span>
+                </a>
+              </mat-list-item>
+              <mat-list-item *ngIf="!(User | async)">
+                <a routerLink="/Login">
+                  <mat-icon>input</mat-icon>
+                  <span>Login/Register</span>
+                </a>
+              </mat-list-item>
+              <mat-list-item *ngIf="(User | async)">
+                  <a routerLink="/Dashboard">
+                    <mat-icon>home</mat-icon>
+                    <span>User Dashboard</span>
+                  </a>
+                </mat-list-item>
+              <mat-list-item *ngIf="(User | async)">
+                  <a (click)="logout()">
+                    <mat-icon>input</mat-icon>
+                    <span>Logout</span>
+                  </a>
+                </mat-list-item>
+              <mat-list-item *ngIf="(User | async)">
+                <a routerLink="/home">
+                  <mat-icon>shopping_basket</mat-icon>
+                  <span>Basket</span>
+                </a>
+              </mat-list-item>
+            </mat-nav-list>
+          </mat-sidenav>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </nav>
+</div>

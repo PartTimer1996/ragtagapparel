@@ -1,0 +1,36 @@
+form {
+  margin: 50px auto 50px auto;
+  display: block;
+}
+form .form-group {
+  margin: 50px auto 50px auto;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+mat-form-field {
+  width: 100%;
+  padding: 0 0 15px 0;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.bottom label {
+  display: inline;
+  margin: 10px;
+}
+.has-success {
+  border-color: green;
+}
+.has-danger {
+  border-color: red;
+}
+input {
+  margin-top: 10px;
+}
+h1 {
+  margin: 50px auto 50px auto;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}

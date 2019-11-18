@@ -48,6 +48,7 @@ authState: boolean;
       .catch(error => {
       this.errormessage = error.message;
       console.log(`Error found: Code: ${this.errorcode}, Message: ${this.errormessage}`);
+      return this.errormessage;
       });
     }
 

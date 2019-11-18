@@ -1,0 +1,44 @@
+<div class="login">
+    <div class="sectionone">
+        <img src="assets/horizontal.png">
+        <div class="siteheader">
+        <h1>
+        Ragtagapparel.co.uk
+        </h1>
+      </div>
+      </div>
+      <div class="sectiontwo">
+<form #f="ngForm" novalidate class="form-signin" (ngSubmit)="login(email.value, password.value)">
+  <h2 class="h3 ">Sign in</h2>
+      <div class="form-group">
+              <mat-form-field  class="email" >
+                      <mat-label>email</mat-label>
+                  <input matInput placeholder="rduffy14@example.com"  name="email"
+                  [(ngModel)]="model.email" #email="ngModel" required
+                  [ngClass]="{'has-success' : email.valid && email.dirty, 'has-danger' : email.invalid && email.dirty}">
+                  <div class="invalid-feedback" *ngIf="email.invalid && email.dirty">
+                      Enter a valid email
+                  </div>
+                </mat-form-field >
+              <mat-form-field  class="password" >
+                <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="6 characters or longer"  name="password"
+            [(ngModel)]="model.password" #password="ngModel" required minlength="6"
+            [ngClass]="{'has-success' : password.valid && password.dirty, 'has-danger' : password.invalid && password.dirty}">
+            <div class="invalid-feedback" *ngIf="password.invalid && password.dirty">
+                Password must be longer than 6 characters
+            </div>
+          </mat-form-field>
+          <div class="bottom">
+              <button mat-raised-button type="submit" [disabled]="f.invalid" color="primary" id="sign-in">Sign in</button>
+            <label style="font-size: small;" for="sign in">New here? Click <a [routerLink]="['/Register']">Here</a> to Register </label>
+</div>
+</div>
+</form>
+</div>
+<h4 >
+    {{ errorMessage }}
+  </h4>
+</div>
+
+<!-- pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" -->

@@ -1,0 +1,15 @@
+<div *ngFor="let item of match$ | async" class="itemdetails">
+<div class="image">
+  <img src="{{item.data.URL}}" alt="">
+</div>
+<div class="details">
+<h1> {{item.data.name}} </h1>
+
+<h4> {{item.data.description}} </h4>
+
+<h4> £{{item.data.price}} </h4>
+<button mat-raised-button color="primary" >Buy Now</button>
+<button mat-raised-button color="primary" >Add to Basket</button>
+</div>
+</div>
+

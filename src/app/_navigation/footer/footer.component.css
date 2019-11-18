@@ -1,0 +1,41 @@
+mat-toolbar {
+  height: auto;
+}
+span {
+  margin: auto;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-areas: "col1 col2 social";
+  margin: auto;
+  position: relative;
+  list-style: none;
+}
+.col1 {
+  grid-area: col1;
+  margin: 5px;
+}
+.col1 ul li {
+  list-style: none;
+  font-size: 12px;
+}
+.col2 {
+  grid-area: col2;
+  margin: 5px;
+}
+.col2 .tiny {
+  font-size: 12px;
+}
+.col2 ul li {
+  list-style: none;
+  font-size: 12px;
+}
+.social {
+  grid-area: social;
+  margin: 5px;
+}
+.social ul li {
+  list-style: none;
+  font-size: 12px;
+}

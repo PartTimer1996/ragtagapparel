@@ -1,0 +1,29 @@
+<mat-toolbar class="main-footer" color="primary">
+  <div class="footer">
+    <div class="col1">
+      <ul>
+          <a style=" color: black;" [routerLink]="['/About']" routerLinkActive="router-link-active" > <li> About Us</li></a>
+      </ul>
+    </div>
+    <div class="col2">
+      <ul>
+          <a style=" color: black;" [routerLink]="['/Contact']" routerLinkActive="router-link-active" > <li> Contact Us</li></a>
+          <a style=" color: black;" [routerLink]="['/FAQs']" routerLinkActive="router-link-active" > <li> FAQ</li></a>
+          <a style=" color: black;" [routerLink]="['/Returns']" routerLinkActive="router-link-active" > <li> Returns</li></a>
+          <a style=" color: black;" [routerLink]="['/Shipping']" routerLinkActive="router-link-active" > <li> Shipping</li></a>
+      </ul>
+      <div class="tiny">
+        @Ryan Duffy 2019 -
+        <a href='https://github.com/PartTimer1996'> <fa-icon  style="font-size:18px; color: black;" [icon]="faGithub"></fa-icon></a>
+      </div>
+    </div>
+    <div class="social">
+      <ul>
+          <li><a href='https://www.facebook.com/#/'><fa-icon style="font-size:25px; color: black;" [icon]="faFacebook"></fa-icon></a></li>
+          <li><a href='https://www.instagram.com/f.e.w.k/'><fa-icon style="font-size:25px;color: black;" [icon]="faInstagram"></fa-icon></a></li>
+          <li><a href='https://www.twitter.com/Fergus_W_K/'><fa-icon style="font-size:25px;color: black;" [icon]="faTwitter"></fa-icon></a></li>
+      </ul>
+    </div>
+  </div>
+
+</mat-toolbar>

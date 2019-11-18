@@ -1,0 +1,57 @@
+<div class="register">
+    <div class="sectionone">
+        <img src="assets/horizontal.png">
+        <div class="siteheader">
+        <h1>
+        Ragtagapparel.co.uk
+        </h1>
+      </div>
+      </div>
+<div class="sectiontwo">
+<div class="my-form">
+<h1>Register</h1>
+<h4>Please enter your details below:</h4>
+<form (ngSubmit)="register(email.value, password.value, display_name.value, profile_photo.value)"
+ #f="ngForm" novalidate class="my-form">
+        <mat-form-field class="full-width">
+               <mat-label>Display Name</mat-label>
+               <input  matInput  placeholder="Display Name"  name="display_name"  [(ngModel)]="model.display_name"
+               #display_name="ngModel" required minlength="7"  required
+               [ngClass]="{'has-success' : display_name.valid && display_name.dirty, 'has-danger' : display_name.invalid && display_name.dirty}">
+               <div class="invalid-feedback" *ngIf="display_name.invalid && display_name.dirty">
+                     Enter a display_name longer than 7 characters
+                 </div>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+               <mat-label>Email</mat-label>
+               <input matInput placeholder="rduffy14@example.com"  name="email"
+                    [(ngModel)]="model.email" #email="ngModel" required
+                    [ngClass]="{'has-success' : email.valid && email.dirty, 'has-danger' : email.invalid && email.dirty}">
+                    <div class="invalid-feedback" *ngIf="email.invalid && email.dirty">
+                        Enter a valid email
+                    </div>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Profile Photo URL</mat-label>
+              <input matInput placeholder="https://profilephoto/"  name="profile_photo"
+                   [(ngModel)]="model.profile_photo" #profile_photo="ngModel" required
+                   [ngClass]="{'has-success' : profile_photo.valid && profile_photo.dirty, 'has-danger' : profile_photo.invalid && email.dirty}">
+                   <div class="invalid-feedback" *ngIf="profile_photo.invalid && profile_photo.dirty">
+                       Please enter a profile photo url
+                   </div>
+           </mat-form-field>
+            <mat-form-field class="full-width">
+               <mat-label>Password</mat-label>
+               <input type="password" matInput  placeholder="6 characters or longer"  name="password"
+              [(ngModel)]="model.password" #password="ngModel" required minlength="6"
+              [ngClass]="{'has-success' : password.valid && password.dirty, 'has-danger' : password.invalid && password.dirty}">
+              <div class="invalid-feedback" *ngIf="password.invalid && password.dirty">
+                  Password must be longer than 6 characters
+              </div>
+            </mat-form-field>
+            <button [disabled]="f.invalid" mat-raised-button type="submit" color="primary">REGISTER</button>
+
+     </form>
+    </div>
+</div>
+</div>

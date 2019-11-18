@@ -1,0 +1,188 @@
+img {
+  width: 100%;
+}
+@media (max-width: 650px) and (min-width: 501px) {
+  .home {
+    display: grid;
+    grid-template-rows: 0.8fr 2.75fr 2.5fr 2fr;
+    grid-template-areas: "one" "two" "three" "four";
+  }
+}
+@media (max-width: 500px) and (min-width: 401px) {
+  .home {
+    display: grid;
+    grid-template-rows: 0.6fr 1.3fr 1.25fr 1fr;
+    grid-template-areas: "one" "two" "three" "four";
+  }
+}
+@media (max-width: 400px) {
+  .home {
+    display: grid;
+    grid-template-rows: 0.5fr 1.3fr 1.25fr 1.2fr;
+    grid-template-areas: "one" "two" "three" "four";
+  }
+}
+@media (min-width: 651px) {
+  .home {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: "one" "two" "three" "four";
+  }
+}
+.sectionone {
+  grid-area: one;
+}
+@media (max-width: 650px) {
+  .sectionone img {
+    height: 200px;
+  }
+}
+@media (min-width: 650px) and (max-width: 1199px) {
+  .sectionone img {
+    height: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  .sectionone .siteheader {
+    top: -18rem;
+    color: black;
+  }
+  .sectionone img {
+    height: 400px;
+  }
+}
+.sectionone .siteheader {
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+.sectiontwo {
+  grid-area: two;
+  margin: 25px 15px 0 15px;
+}
+@media (min-width: 1200px) {
+  .sectiontwo h2 {
+    top: -8rem;
+  }
+  .sectiontwo h4 {
+    top: -6rem;
+  }
+}
+.sectiontwo h2 {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+.sectiontwo h4 {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  margin: 0 auto 20px auto;
+}
+@media (min-width: 800px) {
+  .sectiontwolist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "home1 home2 home3";
+  }
+}
+@media (min-width: 1200px) {
+  .homelist {
+    top: -3rem;
+  }
+}
+.homelist {
+  position: relative;
+  width: 40%;
+  margin: auto;
+}
+.homelist .first {
+  grid-area: home1;
+}
+.homelist .second {
+  grid-area: home2;
+}
+.homelist .third {
+  grid-area: home3;
+}
+.homelist img {
+  border-radius: 200px;
+  border: 5px solid #cfd8dc;
+  position: relative;
+  margin: auto;
+}
+.homelist h3 {
+  position: relative;
+  text-align: center;
+}
+.sectionthree {
+  padding-top: 25px;
+}
+.sectionthree h2 {
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+@media (min-width: 800px) {
+  .sectionthreecontent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "sectionthreefirst sectionthreesecond";
+  }
+}
+.sectionthreelist {
+  width: 60%;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+.sectionthreelist .first {
+  grid-area: sectionthreefirst;
+}
+.sectionthreelist .second {
+  grid-area: sectionthreesecond;
+}
+.sectionthreelist img {
+  border-radius: 50px;
+  border: 5px solid #7b1fa2;
+  width: 70%;
+  position: relative;
+  margin: auto;
+}
+.sectionthreelist button {
+  margin: 15px;
+}
+.sectionfour {
+  padding-top: 10px;
+}
+.sectionfour h4 {
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+.sectionfourcontent {
+  padding: 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "sectionfourfirst" "sectionfoursecond" "sectionfourthird";
+}
+.sectionfourlist {
+  padding: 5px;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+.sectionfourlist .first {
+  grid-area: sectionfourfirst;
+}
+.sectionfourlist .second {
+  grid-area: sectionfoursecond;
+}
+.sectionfourlist .third {
+  grid-area: sectionfourthird;
+}
+.sectionfourlist .descriptivetext {
+  font-size: 15px;
+  padding: 5px;
+}

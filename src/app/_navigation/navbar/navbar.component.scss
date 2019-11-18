@@ -1,0 +1,139 @@
+
+@media (min-width: 1200px) {
+.nav-large{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-areas: "site-title navigation user-management"
+  }
+  .smallscreen{
+    display: none;
+  }
+}
+
+.sitetitle{
+img{
+  position: absolute;
+height: 200px;
+width: 230px;
+left: 25px;
+top: -69px;
+}
+}
+
+.navigation{
+  grid-area: navigation;
+  margin: auto;
+  font-size: 1rem;
+  ul{
+    margin-right: 15px;
+
+    li{
+      display:inline-block;
+      a{
+        margin-right: 40px;
+      }
+    }
+  }
+}
+.usermanagement{
+  grid-area: user-management;
+  margin: auto;
+  font-size: 1rem;
+  ul{
+    margin-right: 15px;
+
+    li{
+      display:inline-block;
+      a{
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .nav-small{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: "sidenav title page"
+    }
+    .bigscreen{
+      display: none;
+    }
+  }
+
+  .sidenavbutton{
+    grid-area: sidenav;
+    margin: auto;
+    font-size: 1rem;
+  }
+
+  .title{
+    grid-area: title;
+  img{
+    position: absolute;
+    @media(min-width: 650px){
+    height: 200px;
+    width: 230px;
+    left: 35%;
+    top: -69px;
+    }
+    @media(max-width: 650px){
+     height: 150px;
+     width: 180px;
+     left: 20%;
+     top: -47px;
+     }
+  }
+  }
+
+  .pagetitle{
+    grid-area: page;
+    margin: auto;
+    font-size: 1rem;
+  }
+
+  :visited {
+  color: #334953;
+  }
+  :link {
+  color: #334953;
+  }
+  .active {
+  background-color: #000000;
+  }
+  .icon {
+  display: inline-block;
+  height: 30px;
+  margin: 0 auto;
+  margin-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  color: #000000;
+  vertical-align: middle;
+  width: 15%;
+  }
+  .label {
+  display: inline-block;
+  line-height: 30px;
+  color: #000000;
+  margin: 0;
+  width: 85%;
+  }
+  mat-list-item{
+  span{
+  color:000000;
+  margin-left:5px;
+  }
+  mat-icon{
+  color:#000000;
+  margin: 5px;
+  }
+
+  }
+
+mat-sidenav {
+  left: 0;
+  width: 50%;
+}
+
